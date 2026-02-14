@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔔 叮咚，你有一条通知</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main class="wrap">
+
+  <!-- ① 通知页 -->
+  <section id="screenReceive" class="screen active">
+    <div class="card">
+      <div class="badge">🔔 叮咚，你有一条通知</div>
+
+      <div class="notif">
+        <div class="notif-dot"></div>
+        <div class="notif-text">你收到一封新的小情书 💌</div>
+      </div>
+
+      <!-- GIF-like animated envelope (CSS animation) -->
+      <div class="envelope anim" aria-label="动画信封">
+        <div class="env-body"></div>
+        <div class="env-flap"></div>
+        <div class="seal">💗</div>
+        <div class="letter-peek"></div>
+      </div>
+
+      <h1 class="title">点开查看吧 ✨</h1>
+      <p class="sub">（打开后就不许装看不到啦）</p>
+
+      <button id="openBtn" class="btn primary">打开</button>
+      <p class="tiny">温柔点一下</p>
+    </div>
+  </section>
+
+  <!-- ② 问题页 -->
+  <section id="screenAsk" class="screen">
+    <div class="card">
+      <div class="badge">来自：你的小可爱 💞</div>
+
+      <div class="scene">
+        <img class="lulu" src="./assets/lulu.png" alt="水豚噜噜" />
+        <div class="float" aria-hidden="true"></div>
+      </div>
+
+      <h1 id="question" class="title">weiwei，爱我吗？🥺</h1>
+      <p class="sub">只能选一个噢</p>
+
+      <div class="buttons">
+        <button id="loveBtn" class="btn gray">爱你 💖</button>
+        <button id="veryLoveBtn" class="btn pink2">非常爱你 💗</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 信纸展示页（无编辑区） -->
+  <section id="screenLetter" class="screen">
+    <div class="card letterCard">
+      <div class="badge">💌 已打开</div>
+
+      <div class="paper">
+        <div class="paper-top">
+          <div class="stamp">🤍</div>
+          <div>
+            <h2 class="paper-title">给 <span id="toNameInTitle">weiwei</span> 的一封信</h2>
+            <p class="paper-sub">（正在输入中…）</p>
+          </div>
+        </div>
+
+        <div id="typeBox" class="typebox"></div>
+      </div>
+
+      <button id="replayBtn" class="btn ghost">重新播放打字 ✨</button>
+      <button id="backBtn" class="btn ghost">回到上一页</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
